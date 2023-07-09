@@ -52,7 +52,8 @@ You can customize the TODO list's UI by modifying the CSS styles in the App.css 
 ## Requirements
 
 - A web browser
-- A basic understanding of HTML, CSS, and JavaScript
+- Node.js
+- A basic understanding of HTML, CSS, JavaScript amd React.js
 
 ## Contributing
 
