@@ -30,19 +30,28 @@ function App() {
       setTodos([
         ...todos,
         {
-          id: todos.length + 1,
+          id: Math.floor(Math.random() * 100000),
           text: todo.trim(),
           checked: false,
         },
       ]);
-      localStorage.setItem("todos", JSON.stringify(todos));
+      localStorage.setItem(
+        "todos",
+        JSON.stringify([
+          ...todos,
+          {
+            id: Math.floor(Math.random() * 100000),
+            text: todo.trim(),
+            checked: false,
+          },
+        ])
+      );
     }
 
     setTodo("");
   };
 
   const handleDeleteTodo = (e, id) => {
-    console.log(e);
     const item = e.target;
     const todo = item.parentElement;
 
@@ -52,7 +61,7 @@ function App() {
       todo.addEventListener("animationend", () => {
         const newTodos = todos.filter((todo) => todo.id !== id);
         setTodos(newTodos);
-        localStorage.setItem("todos", JSON.stringify(todos));
+        localStorage.setItem("todos", JSON.stringify(newTodos));
       });
     }
   };
@@ -93,7 +102,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>TODO List</h1>
+        <h1>TODO List React.js</h1>
       </header>
 
       <form onSubmit={handleFormSubmit}>
