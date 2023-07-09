@@ -18,7 +18,7 @@ To use the todolist, simply follow this steps :
 1. Clone the repository :
 
 ```bash
-   git clone https://github.com/chiragpgauswami/todo-list.git
+   git clone https://github.com/chiragpgauswami/react-todo-list.git
 ```
 
 2. Open the project folder :
